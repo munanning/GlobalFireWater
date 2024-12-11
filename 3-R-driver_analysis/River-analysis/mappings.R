@@ -1,3 +1,4 @@
+# Mapping of feature names to descriptive labels
 feature_name_mapping <- list(
   slope = "Slope (degree)",
   dnbr = "Fire Intensity (dnbr)",
@@ -22,8 +23,9 @@ feature_name_mapping <- list(
   MEAN = "Basin Connectivity (mean)"
 )
 
+# Mapping of feature categories
 feature_category_mapping <- list(
-  `Slope (degree)` = "Connectivity",             # 将 Slope 归类到 Connectivity
+  `Slope (degree)` = "Connectivity",             # Assign Slope to Connectivity
   `Fire Intensity (dnbr)` = "Fire",
   `Land cover (type)` = "Land cover",
   `Wind speed (m/s)` = "Climate",
@@ -40,15 +42,17 @@ feature_category_mapping <- list(
   `Max 7-day precipitation (mm)` = "Climate",
   `First 7-day precipitation (mm)` = "Climate",
   `Fire area per basin area (%)` = "Fire",
-  `Basin Slope (degree)` = "Connectivity",      # 将 Basin Slope 归类到 Connectivity
+  `Basin Slope (degree)` = "Connectivity",      # Assign Basin Slope to Connectivity
   `Basin Connectivity (min)` = "Connectivity",
   `Basin Connectivity (max)` = "Connectivity",
   `Basin Connectivity (mean)` = "Connectivity"
 )
+
+# Mapping of categories to colors
 category_color_mapping <- list(
-  Fire = "brown3",        # 或 LightCoral
-  Connectivity = "gray60",        # 或 Gray
-  Soil = "chocolate",    # 或 DarkGoldenrod
-  Climate = "dodgerblue3",    # 或 DodgerBlue
-  `Land cover` = "forestgreen"  # 或 LimeGreen
+  Fire = "brown3",               # or LightCoral
+  Connectivity = "gray60",       # or Gray
+  Soil = "chocolate",            # or DarkGoldenrod
+  Climate = "dodgerblue3",       # or DodgerBlue
+  `Land cover` = "forestgreen"   # or LimeGreen
 )
