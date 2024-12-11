@@ -1,0 +1,11 @@
+.idea
+.idea/
+.DS_Store
+.ipynb_checkpoints
+New_River_Part/1-parsed_reach_data.csv
+New_River_Part/1-parsed_reach_data_with_predictions.csv
+.RData
+/New_Attribution_after_20241116/fire1115/precipitations/
+*.zip
+/New_Attribution_after_20241116/New_Lake/New-R-drivers-100/100runs_lake/
+/New_Attribution_after_20241116/New_River/New-R-drivers-100/100runs_river/
