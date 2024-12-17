@@ -22,8 +22,8 @@ def ei(y, ypred):
     # Calculate Error Index (EI)
     df = pd.DataFrame({'y': y, 'ypred': ypred})
     df = df[(df['y'] >= 0) & (df['ypred'] >= 0)]
-    Y = np.median(abs(np.log10(df['ypred'] / df['y'])))
-    return 100 * (math.e ** Y - 1)
+    Y = np.median(abs(np.log(df['ypred'] / df['y'])))
+    return math.e ** Y - 1
 
 
 def bias(y, ypred):
@@ -95,10 +95,10 @@ for idx, (model_name, prediction_file) in enumerate(models.items()):
         ax.axvline(x=val, linestyle='-', color='gray', alpha=0.5, lw=0.3)
 
     # Annotate performance metrics
-    ax.text(0.60, 0.06, '$\it{Error}$' + ' = ' + '{}%'.format(round(error, 2)), transform=ax.transAxes, zorder=200)
-    ax.text(0.60, 0.20, '$\it{Bias}$' + ' = ' + '{}%'.format(round(bias_val, 2)), transform=ax.transAxes, zorder=200)
-    ax.text(0.06, 0.88, '$\it{R²}$' + ' = ' + '{}'.format(round(r2_val, 2)), transform=ax.transAxes, zorder=200)
-    ax.text(0.06, 0.74, '$\it{RMSE}$' + ' = ' + '{} mg/L'.format(round(rmse_val, 2)), transform=ax.transAxes,
+    ax.text(0.06, 0.70, '$\it{Error}$' + ' = ' + '{}'.format(round(error, 2)), transform=ax.transAxes, zorder=200)
+    # ax.text(0.60, 0.20, '$\it{Bias}$' + ' = ' + '{}%'.format(round(bias_val, 2)), transform=ax.transAxes, zorder=200)
+    ax.text(0.06, 0.90, '$\it{R²}$' + ' = ' + '{}'.format(round(r2_val, 2)), transform=ax.transAxes, zorder=200)
+    ax.text(0.06, 0.80, '$\it{RMSE}$' + ' = ' + '{} mg/L'.format(round(rmse_val, 2)), transform=ax.transAxes,
             zorder=200)
 
     # Set axis labels and title
